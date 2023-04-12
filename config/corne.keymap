@@ -18,6 +18,7 @@
         ctrl_shift: ctrl_shift {
             label = "ZM_ctrl_shift";
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings = <&macro_press &kp LSHFT>, <&macro_press &kp LCTRL>;
         };
     };
@@ -28,7 +29,7 @@
         base_layer {
             // --------------------------------------------------------------------------------
             // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |  ´   |
-            // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  | SHFT |
+            // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  Ñ  | SHFT |
             // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  | CTRL |
             //                    | ALT | BSC | ENT |   | SPC | TAB | DEL |
             //                    |     |     | L2  |   | L1  |     |  L3 |
