@@ -9,53 +9,9 @@
 //                   |  36 |  37 |  38 |    |  39 |  40 |  41 |
 // ------------------------------------------------------------------------------
 
-// SPANISH KEYCODES ------------------------------------------------------------
-
-#define ES_REXC LS(N1) // !
-#define ES_DQT LS(N2) // "
-#define ES_HASH LS(N3) // #
-#define ES_DOLLAR LS(N4) // $
-#define ES_PERCENT LS(N5) // %
-#define ES_AMPS LS(N6) // &
-#define ES_SLASH LS(N7) // /
-#define ES_LPAR LS(N8) // (
-#define ES_RPAR LS(N9) // )
-#define ES_EQUAL LS(N0) // =
-
-#define ES_AT RALT(N1) // @
-
-#define ES_PIPE GRAVE // |
-#define ES_SQT MINUS // '
-#define ES_LQMK EQUAL // ¿
-
-#define ES_DEGREE LS(GRAVE) // °
-#define ES_RQMK LS(MINUS) // ?
-#define ES_LEXC LS(EQUAL) // ¡
-
-#define ES_BCKSLH RALT(MINUS) // \
-
-#define ES_ACCT LEFT_BRACKET  // ´
-#define ES_PLUS RIGHT_BRACKET // +
-#define ES_LBRC SINGLE_QUOTE  // {
-#define ES_RBRC BACKSLASH     // }
-#define ES_MINUS SLASH         // -
-
-#define ES_UMLAUT LS(LEFT_BRACKET)  // ¨
-#define ES_STAR LS(RIGHT_BRACKET) // *
-#define ES_LBCK LS(SINGLE_QUOTE)  // [
-#define ES_RBCK LS(BACKSLASH)     // ]
-#define ES_UNDERSCR LS(SLASH)         // _
-
-#define ES_TILDE RALT(RIGHT_BRACKET) // ~
-#define ES_CARET RALT(SINGLE_QUOTE)  // ^
-
-#define ES_LESSTH LESS_THAN    // <
-#define ES_GREATH GREATER_THAN // >
-
-// LAYERS ----------------------------------------------------------------------
-#define BASE_L 0
-#define ARROWS_L 1
-#define CHARS_L 2
+#define BASE_L    0
+#define ARROWS_L  1
+#define CHARS_L   2
 #define NUMBERS_L 3
 
 / {
@@ -70,7 +26,7 @@
             //                    | LNX | ALT | LY2 |   | LY1 | SPC | LY3 |
             // --------------------------------------------------------------------------------
             bindings = <
-            &kp ESC   &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I     &kp O   &kp P     &kp ES_ACCT
+            &kp ESC   &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I     &kp O   &kp P     &kp LEFT_BRACKET
             &kp LSHFT &kp A &kp S &kp D &kp F &kp G      &kp H &kp J &kp K     &kp L   &kp SEMI  &kp RSHFT
             &kp LCTRL &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp COMMA &kp DOT &kp SLASH &kp RCTRL
                       &kp LGUI &kp LALT &mo CHARS_L      &mo ARROWS_L &kp SPACE &mo NUMBERS_L
@@ -96,13 +52,13 @@
             // -----------------------------------------------------------------------------
             // | TNS |  @  |  |  |  &  |  {  |  }  |   |  ¿  |  ?  |  $  |  #  |  \  | TNS |
             // | TNS |  `  |  '  |  "  |  (  |  )  |   |  %  |  +  |  *  |  /  |  =  | TNS |
-            // | TNS |     |  ¡  |  !  |  [  |  ]  |   |  <  |  >  |  ^  |  ~  |     | TNS |
+            // | TNS |  ¨  |  ¡  |  !  |  [  |  ]  |   |  <  |  >  |  ^  |  ~  |     | TNS |
             //                   |     |     |     |   | CTL |     |     |
             // -----------------------------------------------------------------------------
             bindings = <
-            &trans &kp ES_AT   &kp ES_PIPE &kp ES_AMPS &kp ES_LBRC &kp ES_RBRC      &kp ES_LQMK    &kp ES_RQMK   &kp ES_DOLLAR &kp ES_HASH  &kp ES_BCKSLH &trans
-            &trans &kp ES_ACCT &kp ES_SQT  &kp ES_DQT  &kp ES_LPAR &kp ES_RPAR      &kp ES_PERCENT &kp ES_PLUS   &kp ES_STAR   &kp ES_SLASH &kp ES_EQUAL  &trans
-            &trans &none       &kp ES_LEXC &kp ES_REXC &kp ES_LBCK &kp ES_RBCK      &kp ES_LESSTH  &kp ES_GREATH &kp ES_CARET  &kp ES_TILDE &none         &trans
+            &trans &kp RALT(N1)   &kp GRAVE &kp LS(N6) &kp SINGLE_QUOTE &kp BACKSLASH      &kp EQUAL    &kp LS(MINUS)   &kp LS(N4) &kp LS(N3)  &kp RALT(MINUS) &trans
+            &trans &kp LEFT_BRACKET &kp MINUS  &kp LS(N2)  &kp LS(N8) &kp LS(N9)      &kp LS(N5) &kp RIGHT_BRACKET   &kp LS(RIGHT_BRACKET)   &kp LS(N7) &kp LS(N0)  &trans
+            &trans &kp LS(LEFT_BRACKET) &kp LS(EQUAL) &kp LS(N1) &kp LS(SINGLE_QUOTE) &kp LS(BACKSLASH)      &kp LESS_THAN  &kp GREATER_THAN &kp RALT(SINGLE_QUOTE)  &kp RALT(RIGHT_BRACKET) &none         &trans
                                            &trans      &trans      &trans           &kp RCTRL      &trans        &trans
             >;
         };
