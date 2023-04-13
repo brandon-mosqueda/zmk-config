@@ -64,16 +64,16 @@
 
         base_layer {
             // --------------------------------------------------------------------------------
-            // | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |  ´   |
+            // | CLST |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |  ´   |
             // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  Ñ  | SHFT |
             // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  | CTRL |
             //                    | LNX | ALT | LY2 |   | LY1 | SPC | LY3 |
             // --------------------------------------------------------------------------------
             bindings = <
-            &kp ESC   &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I     &kp O   &kp P     &kp ES_ACCT
-            &kp LSHFT &kp A &kp S &kp D &kp F &kp G      &kp H &kp J &kp K     &kp L   &kp SEMI  &kp RSHFT
-            &kp LCTRL &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp COMMA &kp DOT &kp SLASH &kp RCTRL
-                      &kp LGUI &kp LALT &mo CHARS_L      &mo ARROWS_L &kp SPACE &mo NUMBERS_L
+            &kp LS(LCTRL) &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I     &kp O   &kp P     &kp ES_ACCT
+            &kp LSHFT     &kp A &kp S &kp D &kp F &kp G      &kp H &kp J &kp K     &kp L   &kp SEMI  &kp RSHFT
+            &kp LCTRL     &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp COMMA &kp DOT &kp SLASH &kp RCTRL
+                          &kp LGUI &kp LALT &mo CHARS_L      &mo ARROWS_L &kp SPACE &mo NUMBERS_L
             >;
         };
 
@@ -81,13 +81,13 @@
             // ---------------------------------------------------------------------------------------
             // | TNS | VOL- | HOME |  UP  | END  | VOL+ |   |  F2  |  F3  |  F4  |  F11 | F12  | TNS |
             // | TNS | UNDO | LEFT | DOWN | RIGH | REDO |   | CTRL | DEL  | ENTR | BSPC | TAB  | TNS |
-            // | TNS | MUTE | PGUP | PRNT | PGDW |      |   | SHFT | CAPS | LNX  |      | MENU | TNS |
+            // | TNS | MUTE | PGUP | PRNT | PGDW | ESC  |   | SHFT | CAPS | LNX  |      | MENU | TNS |
             //                     |      | ALT  | CLST |   |      |      |      |
             // ---------------------------------------------------------------------------------------
             bindings = <
             &trans &kp C_VOL_DN &kp HOME       &kp UP_ARROW    &kp END         &kp C_VOL_UP      &kp F2    &kp F3   &kp F4    &kp F11       &kp F12     &trans
             &trans &kp K_UNDO   &kp LEFT_ARROW &kp DOWN_ARROW  &kp RIGHT_ARROW &kp K_REDO        &kp RCTRL &kp DEL  &kp ENTER &kp BACKSPACE &kp TAB     &trans
-            &trans &kp C_MUTE   &kp PAGE_UP    &kp PRINTSCREEN &kp PAGE_DOWN   &none             &kp RSHFT &kp CAPS &kp LGUI  &none         &kp K_CMENU &trans
+            &trans &kp C_MUTE   &kp PAGE_UP    &kp PRINTSCREEN &kp PAGE_DOWN   &kp ESC           &kp RSHFT &kp CAPS &kp LGUI  &none         &kp K_CMENU &trans
                                                &none           &kp LALT        &kp LS(LCTRL)     &none     &none    &none
             >;
         };
