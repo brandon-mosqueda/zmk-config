@@ -49,8 +49,8 @@
 #define ES_TILDE RA(RIGHT_BRACKET) // ~
 #define ES_CARET RA(SINGLE_QUOTE)  // ^
 
-#define ES_LESSTH LS(COMMA) // <
-#define ES_GREATH LS(DOT)   // >
+#define ES_LESSTH RA(LS(Z)) // <
+#define ES_GREATH RA(LS(X)) // >
 
 // LAYERS ----------------------------------------------------------------------
 #define BASE_L    0
@@ -85,10 +85,10 @@
             //                     |      | ALT  | CLST |   |      |      |      |
             // ---------------------------------------------------------------------------------------
             bindings = <
-            &trans &kp C_VOL_DN  &kp HOME       &kp UP_ARROW    &kp END         &kp C_VOL_UP       &kp F2    &kp F3   &kp F4    &kp F11       &kp F12     &trans
-            &trans &kp C_AC_UNDO &kp LEFT_ARROW &kp DOWN_ARROW  &kp RIGHT_ARROW &kp C_AC_REDO      &kp RCTRL &kp DEL  &kp ENTER &kp BACKSPACE &kp TAB     &trans
-            &trans &kp C_MUTE    &kp PAGE_UP    &kp PRINTSCREEN &kp PAGE_DOWN   &none              &kp RSHFT &kp CAPS &kp LGUI  &none         &kp K_CMENU &trans
-                                                &none           &kp LALT        &kp LS(LCTRL)      &none      &none    &none
+            &trans &kp C_VOL_DN &kp HOME       &kp UP_ARROW    &kp END         &kp C_VOL_UP      &kp F2    &kp F3   &kp F4    &kp F11       &kp F12     &trans
+            &trans &kp K_UNDO   &kp LEFT_ARROW &kp DOWN_ARROW  &kp RIGHT_ARROW &kp K_REDO        &kp RCTRL &kp DEL  &kp ENTER &kp BACKSPACE &kp TAB     &trans
+            &trans &kp C_MUTE   &kp PAGE_UP    &kp PRINTSCREEN &kp PAGE_DOWN   &none             &kp RSHFT &kp CAPS &kp LGUI  &none         &kp K_CMENU &trans
+                                               &none           &kp LALT        &kp LS(LCTRL)     &none     &none    &none
             >;
         };
 
