@@ -15,7 +15,7 @@
 #define ES_DQT LS(N2) // "
 #define ES_HASH LS(N3) // #
 #define ES_DOLLAR LS(N4) // $
-#define ES_PERCENT (N5) // %
+#define ES_PERCENT LS(N5) // %
 #define ES_AMPS LS(N6) // &
 #define ES_SLASH LS(N7) // /
 #define ES_LPAR LS(N8) // (
