@@ -11,39 +11,39 @@
 
 // SPANISH KEYCODES ------------------------------------------------------------
 
-#define ES_REXC    LS(N1) // !
-#define ES_DQT     LS(N2) // "
-#define ES_HASH    LS(N3) // #
-#define ES_DOLLAR  LS(N4) // $
-#define ES_PERCENT LS(N5) // %
-#define ES_AMPS    LS(N6) // &
-#define ES_SLASH   LS(N7) // /
-#define ES_LPAR    LS(N8) // (
-#define ES_RPAR    LS(N9) // )
-#define ES_EQUAL   LS(N0) // =
+#define ES_REXC LS(N1) // !
+#define ES_DQT LS(N2) // "
+#define ES_HASH LS(N3) // #
+#define ES_DOLLAR LS(N4) // $
+#define ES_PERCENT (N5) // %
+#define ES_AMPS LS(N6) // &
+#define ES_SLASH LS(N7) // /
+#define ES_LPAR LS(N8) // (
+#define ES_RPAR LS(N9) // )
+#define ES_EQUAL LS(N0) // =
 
 #define ES_AT RALT(N1) // @
 
 #define ES_PIPE GRAVE // |
-#define ES_SQT  MINUS // '
+#define ES_SQT MINUS // '
 #define ES_LQMK EQUAL // ¿
 
 #define ES_DEGREE LS(GRAVE) // °
-#define ES_RQMK   LS(MINUS) // ?
-#define ES_LEXC   LS(EQUAL) // ¡
+#define ES_RQMK LS(MINUS) // ?
+#define ES_LEXC LS(EQUAL) // ¡
 
 #define ES_BCKSLH RALT(MINUS) // \
 
-#define ES_ACCT  LEFT_BRACKET  // ´
-#define ES_PLUS  RIGHT_BRACKET // +
-#define ES_LBRC  SINGLE_QUOTE  // {
-#define ES_RBRC  BACKSLASH     // }
+#define ES_ACCT LEFT_BRACKET  // ´
+#define ES_PLUS RIGHT_BRACKET // +
+#define ES_LBRC SINGLE_QUOTE  // {
+#define ES_RBRC BACKSLASH     // }
 #define ES_MINUS SLASH         // -
 
-#define ES_UMLAUT   LS(LEFT_BRACKET)  // ¨
-#define ES_STAR     LS(RIGHT_BRACKET) // *
-#define ES_LBCK     LS(SINGLE_QUOTE)  // [
-#define ES_RBCK     LS(BACKSLASH)     // ]
+#define ES_UMLAUT LS(LEFT_BRACKET)  // ¨
+#define ES_STAR LS(RIGHT_BRACKET) // *
+#define ES_LBCK LS(SINGLE_QUOTE)  // [
+#define ES_RBCK LS(BACKSLASH)     // ]
 #define ES_UNDERSCR LS(SLASH)         // _
 
 #define ES_TILDE RALT(RIGHT_BRACKET) // ~
