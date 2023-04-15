@@ -82,13 +82,13 @@
             // | TNS | VOL- | HOME |  UP  | END  | VOL+ |   |  F2  |  F3  |  F4  |  F11 | F12  | TNS |
             // | TNS | UNDO | LEFT | DOWN | RIGH | REDO |   | CTRL | DEL  | ENTR | BSPC | TAB  | TNS |
             // | TNS | MUTE | PGUP | PRNT | PGDW | ESC  |   | SHFT | CAPS | LNX  |      | MENU | TNS |
-            //                     |      | ALT  | CLST |   |      |      |      |
+            //                     | TNS  | TNS  | CLST |   |      |      |      |
             // ---------------------------------------------------------------------------------------
             bindings = <
             &trans &kp C_VOL_DN &kp HOME       &kp UP_ARROW    &kp END         &kp C_VOL_UP      &kp F2    &kp F3   &kp F4    &kp F11       &kp F12     &trans
             &trans &kp K_UNDO   &kp LEFT_ARROW &kp DOWN_ARROW  &kp RIGHT_ARROW &kp K_REDO        &kp RCTRL &kp DEL  &kp ENTER &kp BACKSPACE &kp TAB     &trans
             &trans &kp C_MUTE   &kp PAGE_UP    &kp PRINTSCREEN &kp PAGE_DOWN   &kp ESC           &kp RSHFT &kp CAPS &kp LGUI  &none         &kp K_CMENU &trans
-                                               &none           &kp LALT        &kp LS(LCTRL)     &none     &none    &none
+                                               &trans          &trans          &kp LS(LCTRL)     &none     &none    &none
             >;
         };
 
