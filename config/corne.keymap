@@ -48,6 +48,7 @@
 
 #define ES_TILDE RA(RIGHT_BRACKET) // ~
 #define ES_CARET RA(SINGLE_QUOTE)  // ^
+#define ES_GRAVE RA(BACKSLASH)     // `
 
 #define ES_LESSTH RA(LS(Z)) // <
 #define ES_GREATH RA(LS(X)) // >
@@ -101,7 +102,7 @@
             // -----------------------------------------------------------------------------
             bindings = <
             &trans &kp ES_AT     &kp ES_PIPE &kp ES_AMPS &kp ES_LBRC &kp ES_RBRC      &kp ES_LQMK    &kp ES_RQMK   &kp ES_DOLLAR &kp ES_HASH  &kp ES_BCKSLH &trans
-            &trans &kp ES_ACCT   &kp ES_SQT  &kp ES_DQT  &kp ES_LPAR &kp ES_RPAR      &kp ES_PERCENT &kp ES_PLUS   &kp ES_STAR   &kp ES_SLASH &kp ES_EQUAL  &trans
+            &trans &kp ES_GRAVE  &kp ES_SQT  &kp ES_DQT  &kp ES_LPAR &kp ES_RPAR      &kp ES_PERCENT &kp ES_PLUS   &kp ES_STAR   &kp ES_SLASH &kp ES_EQUAL  &trans
             &trans &kp ES_UMLAUT &kp ES_LEXC &kp ES_REXC &kp ES_LBCK &kp ES_RBCK      &kp ES_LESSTH  &kp ES_GREATH &kp ES_CARET  &kp ES_TILDE &none         &trans
                                              &trans      &trans      &trans           &kp RCTRL      &trans        &trans
             >;
