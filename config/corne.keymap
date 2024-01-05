@@ -58,6 +58,7 @@
 #define ARROWS_L  1
 #define CHARS_L   2
 #define NUMBERS_L 3
+#define GAMES_L 4
 
 / {
     keymap {
@@ -74,7 +75,7 @@
             &kp LS(RCTRL) &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I     &kp O   &kp P     &kp ES_ACCT
             &kp RCTRL     &kp A &kp S &kp D &kp F &kp G      &kp H &kp J &kp K     &kp L   &kp SEMI  &kp RCTRL
             &kp ESC       &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp COMMA &kp DOT &kp SLASH &kp LGUI
-                         &kp LALT &kp LSHFT &mo CHARS_L      &mo ARROWS_L &kp SPACE &mo NUMBERS_L
+                         &kp LALT &kp LSHFT &mo CHARS_L      &mo ARROWS_L &kp SPACE &to NUMBERS_L
             >;
         };
 
@@ -110,16 +111,31 @@
 
         numbers_layer {
             // -----------------------------------------------------------------------------------
-            // |     |     |  9  |  8  |  7  |     |      |      | BPRV | BCLR | BNXT |      |      |
+            // | LY4 |     |  9  |  8  |  7  |     |      |      | BPRV | BCLR | BNXT |      |      |
             // |     |     |  6  |  5  |  4  |  0  |      |  F5  |  F6  |  F7  |  F9  | F10  | F11  |
             // |     |     |  3  |  2  |  1  |     |      |      | MLWS |      | MRWS |      |      |
-            //                   |     |     |     |      |      |      |      |
+            //                   |     |     |     |      |      |      | LY0  |
             // -----------------------------------------------------------------------------------
             bindings = <
-			&none &none &kp N9 &kp N8 &kp N7 &none       &none  &bt BT_PRV             &bt BT_CLR &bt BT_NXT              &none   &none
-            &none &none &kp N6 &kp N5 &kp N4 &kp N0      &kp F5 &kp F6                 &kp F7     &kp F9                  &kp F10 &kp F11
-			&none &none &kp N3 &kp N2 &kp N1 &none       &none  &kp LS(LG(LEFT_ARROW)) &none      &kp LS(LG(RIGHT_ARROW)) &none   &none
-                			   &none  &none  &none       &none  &none                  &none
+			&to GAMES_L &none &kp N9 &kp N8 &kp N7 &none       &none  &bt BT_PRV             &bt BT_CLR &bt BT_NXT              &none   &none
+            &none       &none &kp N6 &kp N5 &kp N4 &kp N0      &kp F5 &kp F6                 &kp F7     &kp F9                  &kp F10 &kp F11
+			&none       &none &kp N3 &kp N2 &kp N1 &none       &none  &kp LS(LG(LEFT_ARROW)) &none      &kp LS(LG(RIGHT_ARROW)) &none   &none
+                			         &none  &none  &none       &none  &none                  &to BASE_L
+            >;
+        };
+
+        games_layer {
+            // --------------------------------------------------------------------------------
+            // | TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |  ´   |
+            // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  Ñ  | CTRL |
+            // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  | LNUX |
+            //                    | SPC | ALT | ESC |   | LY0 | SPC |     |
+            // --------------------------------------------------------------------------------
+            bindings = <
+            &kp TAB   &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I     &kp O   &kp P     &kp ES_ACCT
+            &kp LSHFT &kp A &kp S &kp D &kp F &kp G      &kp H &kp J &kp K     &kp L   &kp SEMI  &kp RCTRL
+            &kp RCTRL &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp COMMA &kp DOT &kp SLASH &kp LGUI
+                         &kp SPACE &kp LALT &kp ESC      &to BASE_L &kp SPACE &none
             >;
         };
     };
